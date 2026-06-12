@@ -18,6 +18,7 @@ COPY pyproject.toml README.md ir_schema.json ./
 COPY backend ./backend
 COPY shared ./shared
 COPY companion ./companion
+COPY adapters ./adapters
 COPY ido_blender.zip ./ido_blender.zip
 COPY --from=web /web/dist ./web/dist
 
