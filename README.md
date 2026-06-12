@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/ido-banner.png" alt="idō" width="640" />
+</p>
+
 # idō
 
 idō is one local companion for two separate CAD workflows:
