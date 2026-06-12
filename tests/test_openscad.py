@@ -86,9 +86,7 @@ def test_cli_parser_exposes_required_command_shapes() -> None:
     prompt_args = parser.parse_args(
         ["prompt", "--tool", "openscad", "make", "a", "bracket"]
     )
-    pet_args = parser.parse_args(["pet", "hide"])
 
     assert open_args.tool == "blender"
     assert prompt_args.tool == "openscad"
     assert " ".join(prompt_args.prompt) == "make a bracket"
-    assert pet_args.action == "hide"
