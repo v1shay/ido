@@ -4,13 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - "site/**"
       - "web/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -19,33 +18,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare GitHub Pages artifact
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Build unified website
+        working-directory: web
         run: |
-          mkdir -p _site
-          cp -R site/. _site/
-          cat >> _site/README_DEPLOY.txt <<'EOF'
-          Public marketing site. For the live companion (prompt + Blender/OpenSCAD),
-          clone the repo and run: .venv/bin/python -m backend
-          then open http://127.0.0.1:8010
-          EOF
-      - uses: actions/configure-pages@v5
+          npm ci
+          npm run build
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: web/dist
+          force_orphan: true
