@@ -106,16 +106,11 @@ class RuntimeStatus(ContractModel):
     active_project: str | None = None
     artifacts: dict[str, str] = Field(default_factory=dict)
     recent_errors: list[str] = Field(default_factory=list)
-    pet_visible: bool = True
     provider: str | None = None
     inference_provider: str | None = None
     clickhouse_enabled: bool = False
     clickhouse_exported: bool | None = None
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
-
-class PetVisibilityRequest(ContractModel):
-    visible: bool
 
 
 class IntegrationsStatus(ContractModel):
