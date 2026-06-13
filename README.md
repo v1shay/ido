@@ -32,21 +32,21 @@
 
 <div align="center">
 
-<img width="240" height="90" alt="Screenshot 1" src="https://github.com/user-attachments/assets/03db51fc-6078-4540-b222-e7c755b9f0c5" />
-<img width="240" height="90" alt="Screenshot 2" src="https://github.com/user-attachments/assets/6667fa06-53ac-482e-b1b0-e139b23ec3f7" />
-<img width="240" height="90" alt="Screenshot 3" src="https://github.com/user-attachments/assets/fb9c25d0-fa6d-4c33-ab96-754c01ead670" />
+<img width="240" height="95" alt="Screenshot 1" src="https://github.com/user-attachments/assets/03db51fc-6078-4540-b222-e7c755b9f0c5" />
+<img width="240" height="95" alt="Screenshot 2" src="https://github.com/user-attachments/assets/6667fa06-53ac-482e-b1b0-e139b23ec3f7" />
+<img width="240" height="95" alt="Screenshot 3" src="https://github.com/user-attachments/assets/fb9c25d0-fa6d-4c33-ab96-754c01ead670" />
 
 <br />
 
-<img width="240" height="90" alt="Screenshot 4" src="https://github.com/user-attachments/assets/6b6cb0bc-1d8a-4242-9340-381603d0d174" />
-<img width="240" height="90" alt="Screenshot 5" src="https://github.com/user-attachments/assets/86f080fa-56e8-49bf-b114-af71a10863be" />
-<img width="240" height="90" alt="Screenshot 6" src="https://github.com/user-attachments/assets/f076383e-971f-449d-bb45-671ff027b03c" />
+<img width="240" height="95" alt="Screenshot 4" src="https://github.com/user-attachments/assets/6b6cb0bc-1d8a-4242-9340-381603d0d174" />
+<img width="240" height="95" alt="Screenshot 5" src="https://github.com/user-attachments/assets/86f080fa-56e8-49bf-b114-af71a10863be" />
+<img width="240" height="95" alt="Screenshot 6" src="https://github.com/user-attachments/assets/f076383e-971f-449d-bb45-671ff027b03c" />
 
 <br />
 
-<img width="240" height="90" alt="Screenshot 7" src="https://github.com/user-attachments/assets/71364a6f-7bea-4fab-8d21-7a9b4a84ee36" />
-<img width="240" height="90" alt="Screenshot 8" src="https://github.com/user-attachments/assets/1ac1c257-11b1-431c-af56-19b0d9363a85" />
-<img width="240" height="90" alt="Screenshot 9" src="https://github.com/user-attachments/assets/c99bf2fb-e996-4136-ad2c-fb40a4329a1e" />
+<img width="240" height="95" alt="Screenshot 7" src="https://github.com/user-attachments/assets/71364a6f-7bea-4fab-8d21-7a9b4a84ee36" />
+<img width="240" height="95" alt="Screenshot 8" src="https://github.com/user-attachments/assets/1ac1c257-11b1-431c-af56-19b0d9363a85" />
+<img width="240" height="95" alt="Screenshot 9" src="https://github.com/user-attachments/assets/c99bf2fb-e996-4136-ad2c-fb40a4329a1e" />
 
 </div>
 
