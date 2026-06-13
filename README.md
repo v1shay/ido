@@ -1,8 +1,8 @@
 <div align="center">
 
-<img width="900" alt="ido banner" src="https://github.com/user-attachments/assets/e5ff1f2a-acd8-4346-b54e-0975422f28e8" />
+<img width="850" alt="Screenshot 2026-06-12 at 11 50 14 PM" src="https://github.com/user-attachments/assets/0343ef96-fdf0-4aa0-b138-b53c30d5cd7b" />
 
-### The universal agent harness for 3D Design • 3rd Place at AWS x Anthropic Harness Engineering Hack
+### _The universal agent harness for 3D Design • Top 3 @ AWS x Anthropic Harness Engineering Hack_
 
 <br>
 
