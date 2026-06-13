@@ -1,3 +1,5 @@
+<img width="1756" height="986" alt="Adobe Express - Screen Recording 2026-06-12 at 10 34 17 PM" src="https://github.com/user-attachments/assets/e8a34511-fdf2-494f-89cc-36b95c4b9948" />
+
 <p align="center">
   <img src="assets/ido-banner.png" alt="idō" width="640" />
 </p>
