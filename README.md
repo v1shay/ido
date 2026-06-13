@@ -1,215 +1,143 @@
-<img width="1756" height="986" alt="Adobe Express - Screen Recording 2026-06-12 at 10 34 17 PM" src="https://github.com/user-attachments/assets/e8a34511-fdf2-494f-89cc-36b95c4b9948" />
+<div align="center">
 
-<p align="center">
-  <img src="assets/ido-banner.png" alt="idō" width="640" />
-</p>
+<img width="900" alt="ido banner" src="https://github.com/user-attachments/assets/e5ff1f2a-acd8-4346-b54e-0975422f28e8" />
 
-# idō
+### The universal agent harness for 3D Design • 3rd Place at AWS x Anthropic Harness Engineering Hack
 
-idō is one local companion for two separate CAD workflows:
+<br>
 
-- `adapters/blender/` renders editable Engineering IR inside Blender.
-- `adapters/openscad/` compiles Engineering IR into a watched `.scad` file and
-  exports STL, PNG, 3MF, and SVG artifacts.
+<img width="650" alt="ido demo" src="https://github.com/user-attachments/assets/e8a34511-fdf2-494f-89cc-36b95c4b9948" />
 
-The shared FastAPI backend, CLI, and status model live on `main`.
-Blender and OpenSCAD project state remain separate in v1.
+</div>
 
-## Install
+</div>
 
-Python 3.11 or newer is required for development.
+### what people are building with Ido for Blender →
+
+<div align="center">
+
+<img width="250" height="180" alt="Blender example 1" src="https://github.com/user-attachments/assets/5f72c99c-3a76-468f-bc2a-bb1b90be6ee4" />
+<img width="250" height="180" alt="Blender example 2" src="https://github.com/user-attachments/assets/8f5882c3-5b7b-4215-8570-3f92b770a80a" />
+<img width="250" height="180" alt="Blender example 3" src="https://github.com/user-attachments/assets/c66922c6-7f37-4a65-a8e5-dca2d4932d61" />
+
+<br />
+
+<img width="250" height="180" alt="Blender example 4" src="https://github.com/user-attachments/assets/df3ee458-9054-4fe1-8faa-800ea297b2fe" />
+<img width="250" height="180" alt="Blender example 5" src="https://github.com/user-attachments/assets/eb0bbbdb-11b8-4aa0-81a2-8f7c13969def" />
+<img width="250" height="180" alt="Blender example 6" src="https://github.com/user-attachments/assets/77d1dd88-31de-407f-9e5e-9ca6952ea720" />
+
+</div>
+
+### what people are building with Ido for OpenSCAD →
+
+<div align="center">
+
+<img width="280" height="105" alt="Screenshot 1" src="https://github.com/user-attachments/assets/03db51fc-6078-4540-b222-e7c755b9f0c5" />
+<img width="280" height="105" alt="Screenshot 2" src="https://github.com/user-attachments/assets/6667fa06-53ac-482e-b1b0-e139b23ec3f7" />
+<img width="280" height="105" alt="Screenshot 3" src="https://github.com/user-attachments/assets/fb9c25d0-fa6d-4c33-ab96-754c01ead670" />
+
+<br />
+
+<img width="280" height="105" alt="Screenshot 4" src="https://github.com/user-attachments/assets/6b6cb0bc-1d8a-4242-9340-381603d0d174" />
+<img width="280" height="105" alt="Screenshot 5" src="https://github.com/user-attachments/assets/86f080fa-56e8-49bf-b114-af71a10863be" />
+<img width="280" height="105" alt="Screenshot 6" src="https://github.com/user-attachments/assets/f076383e-971f-449d-bb45-671ff027b03c" />
+
+<br />
+
+<img width="280" height="105" alt="Screenshot 7" src="https://github.com/user-attachments/assets/71364a6f-7bea-4fab-8d21-7a9b4a84ee36" />
+<img width="280" height="105" alt="Screenshot 8" src="https://github.com/user-attachments/assets/1ac1c257-11b1-431c-af56-19b0d9363a85" />
+<img width="280" height="105" alt="Screenshot 9" src="https://github.com/user-attachments/assets/c99bf2fb-e996-4136-ad2c-fb40a4329a1e" />
+
+</div>
+
+<br>
+
+<table>
+  <tr>
+    <td width="42%" valign="middle">
+      <img width="666" alt="ido screenshot" src="https://github.com/user-attachments/assets/7e3ac19f-d885-442f-80b1-9f965e81903b" />
+    </td>
+    <td width="58%" valign="middle">
+      <h2>idō pet</h2>
+      <p>
+        the idō pet allows you to track idō's task progress while working in another tab or viewing results in your modeling software
+      </p>
+    </td>
+  </tr>
+</table>
+
+</br>
+
+<details>
+<summary><strong>Install</strong></summary>
+
+Requires Python 3.11+ and an `OPENAI_API_KEY`
 
 ```bash
+git clone https://github.com/v1shay/ido3d
+cd ido3D
+
 python3 -m venv .venv
-.venv/bin/pip install -e '.[dev]'
-cp .env.example .env
-```
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
 
-Set `OPENAI_API_KEY` in `.env`, or run deterministic demo prompts with:
-
-```bash
-CAD_AGENT_DEMO_MODE=true ido
-```
-
-## CLI
-
-```bash
+export OPENAI_API_KEY=sk-...
 ido
-ido open blender
-ido open openscad
-ido prompt --tool blender "make a house"
-ido prompt --tool openscad "make a bracket with two mounting holes"
-ido status
 ```
 
-`ido` starts the API on `http://127.0.0.1:8010` and opens the local control
-website. OpenSCAD projects are written under `~/.ido/projects/default` unless
-`IDO_OUTPUT_DIR` is set.
+Open `http://127.0.0.1:8010`.
 
-## Blender
+</details>
 
-Build the add-on archive:
+<details>
+<summary><strong>Blender setup</strong></summary>
 
 ```bash
 cd adapters/blender
 zip -r ../../ido_blender.zip ido_blender
+cd ../..
+
+ido serve
 ```
 
-Install it through `Blender → Edit → Preferences → Add-ons → Install from Disk`,
-press `N` in the 3D View, and open the `idō` tab. The default backend URL
-is `http://127.0.0.1:8010`.
+In Blender:
 
-## OpenSCAD
+1. Open `Edit -> Preferences -> Add-ons`
+2. Install `ido_blender.zip`
+3. Press `N` in the 3D View
+4. Open the `idō` tab
+5. Use `http://127.0.0.1:8010` as the backend
 
-Install OpenSCAD so its CLI is on `PATH`, then run:
+Prompt from the CLI:
+
+```bash
+ido prompt --tool blender "make a small cabin"
+```
+
+</details>
+
+<details>
+<summary><strong>OpenSCAD setup</strong></summary>
+
+Install OpenSCAD and make sure `openscad` is on your `PATH`
 
 ```bash
 ido open openscad
-ido prompt --tool openscad "make a 30 mm cube with a centered hole"
+ido prompt --tool openscad "make a bracket with two mounting holes"
 ```
 
-The adapter writes and verifies `ido_current.scad`. Missing export tooling is
-reported without discarding the generated source.
+Outputs are written to `~/.ido/projects/default`
 
-## Website
+</details>
 
-The React/Vite product and documentation site is in `web/`.
+<details>
+<summary><strong>Command</strong></summary>
 
 ```bash
-cd web
-npm ci
-npm run dev
-npm run build
+ido                 # open the local app
+ido serve           # run the API
+ido status          # check runtime status
+ido reset           # clear generated files
 ```
 
-The same build is served locally by the companion at http://127.0.0.1:8010 when
-you run `ido serve`.
-
-## Verification
-
-```bash
-.venv/bin/pytest
-cd web && npm run lint && npm run build
-```
-
-Run the exact two-prompt flow in headless Blender while the backend is running:
-
-```bash
-ido render blender "make a house" --follow-up "add more windows"
-# or directly:
-/Applications/Blender.app/Contents/MacOS/Blender \
-  --background --factory-startup --python scripts/blender_smoke.py
-```
-
-GitHub Actions tests Python on macOS, Windows, and Linux, and creates companion
-plus Blender add-on artifacts for version tags.
-
-## TrueFoundry
-
-The backend includes a Dockerfile and `deploy_truefoundry.py`. Install and
-authenticate the current TrueFoundry CLI/SDK:
-
-```bash
-.venv/bin/pip install truefoundry
-export TFY_HOST=https://your-org.truefoundry.cloud
-export TFY_API_KEY=your-token
-export TFY_WORKSPACE_FQN=your-workspace-fqn
-export TFY_SERVICE_HOST=cad-agent-api.your-domain.example
-export OPENAI_API_KEY=your-openai-key
-.venv/bin/python deploy_truefoundry.py
-```
-
-The token values remain local environment variables and must never be committed.
-The application emits structured `parse`, `validate`, `route`, and `execute`
-events that are forwarded to Guild when trace export is enabled.
-
-## Guild AI
-
-Enable OpenTelemetry trace export to Guild after each prompt and execution
-report:
-
-```bash
-export GUILD_TRACE_ENABLED=true
-export GUILD_OTLP_ENDPOINT=https://your-guild-collector/v1/traces
-export GUILD_API_KEY=your-guild-token
-export GUILD_WORKSPACE_ID=your-workspace-id
-```
-
-After a successful generate in Blender (for example `add more windows`), the
-sidebar shows the full request timeline (`parse → validate → route → execute`)
-with timings. Use **Open in Guild** to inspect the exported trace, or enable
-**Auto-open Guild after generate** in Connection Settings.
-
-## OpenUI
-
-Every prompt response includes OpenUI Lang that describes the request timeline
-and Engineering IR summary. In Blender, use **Show OpenUI Lang** to inspect the
-generative UI description in the Text Editor.
-
-## ClickHouse
-
-Enable trace storage for analytics across requests:
-
-```bash
-export CLICKHOUSE_ENABLED=true
-export CLICKHOUSE_HOST=your-host.clickhouse.cloud
-export CLICKHOUSE_PORT=8443
-export CLICKHOUSE_SECURE=true
-export CLICKHOUSE_USERNAME=default
-export CLICKHOUSE_PASSWORD=your-password
-```
-
-Trace rows are inserted into `cad_agent_traces` after each prompt and execution
-report.
-
-## Composio
-
-Notify an external action after Blender execution completes:
-
-```bash
-export COMPOSIO_ENABLED=true
-export COMPOSIO_API_KEY=your-composio-key
-export COMPOSIO_USER_ID=cad-agent-user
-export COMPOSIO_TOOL_SLUG=YOUR_CONFIGURED_TOOL
-```
-
-Composio receives a summary of the full request timeline when execution is
-reported.
-
-## Pioneer
-
-Use Pioneer as the inference provider with the OpenAI-compatible API:
-
-```bash
-export CAD_AGENT_PROVIDER=pioneer
-export PIONEER_API_KEY=your-pioneer-key
-export PIONEER_MODEL_ID=your-model-id
-```
-
-Pioneer runs with the same Engineering IR schema as OpenAI. If inference fails,
-the deterministic house demo fallback still applies.
-
-## Airbyte
-
-Export design context for Airbyte to sync into your context layer:
-
-```bash
-export AIRBYTE_ENABLED=true
-export AIRBYTE_CONTEXT_DIR=./airbyte/context
-# optional HTTP sink:
-export AIRBYTE_CONTEXT_ENDPOINT=https://your-context-endpoint
-```
-
-Each prompt and execution appends a JSONL record with the prompt, IR, and trace.
-
-## Render
-
-Deploy the API on [Render](https://render.com) using the included blueprint:
-
-1. Open [Render Blueprint deploy](https://dashboard.render.com/select-repo?type=blueprint)
-2. Connect **arora13/Ido** and select the **`main`** branch
-3. Render reads `render.yaml`, builds the Docker image (API + web panel), and health-checks `/api/health`
-4. Optional: add `PIONEER_API_KEY`, `OPENAI_API_KEY`, or sponsor env vars in the Render dashboard
-
-Demo mode is enabled by default so the service works without inference keys. Set
-`CAD_AGENT_DEMO_MODE=false` and configure a provider when you add API keys.
+</details>
